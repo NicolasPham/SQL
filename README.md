@@ -1,10 +1,10 @@
-``` sql
+``` PYTHON
 # Create table
   CREATE TABLE <table_name>
                  (
-                 column1 VARCHAR(100) NOT NULL,
-                 column2 VARCHAR(10) NOT NULL,
-                 column3 INT NOT NULL
+                 name VARCHAR(100) NOT NULL DEFAULT 'unnamed',
+                 address VARCHAR(10) NOT NULL,
+                 age INT NOT NULL DEFAULT 0
                  );
 
 # Insert / adding data into the table
