@@ -1,3 +1,5 @@
+<details><summary>Collapse</summary><p>
+  
 ``` PYTHON
 # Create table
   CREATE TABLE <table_name>
@@ -31,3 +33,5 @@
 # CRUD: stands for Create, read, update and delete
 
 ```
+</p>
+</details>
