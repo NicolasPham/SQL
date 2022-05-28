@@ -26,7 +26,8 @@
   
   DELETE FROM <table_name> WHERE <column_name> = <condition>;
   
-  
+# String functions:
+
   
 
 # Null value: the value that is unknown (doesnt mean equal 0). It is ok to be empty
