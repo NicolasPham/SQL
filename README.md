@@ -22,10 +22,12 @@
   UPDATE <table_name> SET <column_name> = ''  
           WHERE <condition>;
   
+  DELETE FROM <table_name> WHERE <column_name> = <condition>;
   
   
   
 
 # Null value: the value that is unknown (doesnt mean equal 0). It is ok to be empty
+# CRUD: stands for Create, read, update and delete
 
 ```
