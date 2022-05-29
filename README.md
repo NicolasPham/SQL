@@ -51,7 +51,16 @@
   >> SELECT CHAR_LENGTH('Hello World'): 11
   
 > UPPER and LOWER: Change a string case
-  >> 
+
+# Refining the selection
+  > DISTINCT: return only distinct (different) values
+    >> SELECT DISTINCT author_lname FROM books;
+    >> SELECT DISTINCT author_fname, author_lname FROM books;
+  
+  > ORDER BY: (sorting our values)
+    >> SELECT author_lname FROM books ORDER BY author_lname; (ascending by default)
+    >> SELECT author_lname FROM books ORDER BY author_lname DESC;
+    >> SELECT title, author_fname, author_lname FROM books ORDER BY 2: 2 is author_fname
   
   
 # Null value: the value that is unknown (doesnt mean equal 0). It is ok to be empty
