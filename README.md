@@ -27,24 +27,33 @@
   DELETE FROM <table_name> WHERE <column_name> = <condition>;
   
 # String functions:
-> Concat:  combine data for cleaner output
-  concat (<column2>, 'text', <column2>, 'text') : 
-     SELECT CONCAT(first_name, ' ', last_name) AS <new_name> FROM <table_name>;
+> CONCAT:  combine data for cleaner output
+  >> concat (<column2>, 'text', <column2>, 'text') : 
+     >>> SELECT CONCAT(first_name, ' ', last_name) AS <new_name> FROM <table_name>;
   
      SELECT author_fname as first, author_lname as last, 
      CONCAT (author_fname, author_lname) AS full,
      FROM books;
 
 > Concat_WS
-  CONCAT('text', <column1>, <column2>, .etc) : combine all columns and separate them by 'text'
+  >> CONCAT('text', <column1>, <column2>, .etc) : combine all columns and separate them by 'text'
 
 > SUBSTRING
-  SELECT SUBSTRING('STRING',#1, #2): return the character from #1 to #2, start with 1
-    SELECT SUBSTING ('Hello World', 7): World
-    SELECT SUBSTRING('Hello World', -3): rld (how many last characters we want to get)
+  >> SELECT SUBSTRING('STRING',#1, #2): return the character from #1 to #2, start with 1
+    >>> SELECT SUBSTING ('Hello World', 7): World
+    >>> SELECT SUBSTRING('Hello World', -3): rld (how many last characters we want to get)
 
+> REPLACE: replace parts of the string
+  >> SELECT REAPLCE ('Hello World', 'Hell', '1234'): '1234o World'
+  >> SELECT REPALCE (title, 'e', '3') FROM books;
 
-
+> CHAR_LENGTH(): count how many characters in the string
+  >> SELECT CHAR_LENGTH('Hello World'): 11
+  
+> UPPER and LOWER: Change a string case
+  >> 
+  
+  
 # Null value: the value that is unknown (doesnt mean equal 0). It is ok to be empty
 # CRUD: stands for Create, read, update and delete
 
