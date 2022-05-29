@@ -62,6 +62,17 @@
     >> SELECT author_lname FROM books ORDER BY author_lname DESC;
     >> SELECT title, author_fname, author_lname FROM books ORDER BY 2: 2 is author_fname
   
+  > LIMIT: state how many rows we want to get
+    >> SELECT title FROM books ORDER BY released_year DESC LIMIT 2,5; take 5 books that have the most sells "after" 2
+    
+  > LIKE : better search
+    >> WHERE author_fname LIKE '%da%' : where author first name has the letters "da" in it
+      >>> % ... % is called wildcard
+    >> WHERE author_fname LIKE 'da%' : where author first name start "da"
+    >> WHERE stock_quantity LIKE '___' : 3 underscors equal to 3 digits exactly
+    >> WHERE title LIKE '%\%%': title contains '%' in it
+    >> SELECT title FROM books WHERE title LIKE '%\_%': title has '_' in it
+  
   
 # Null value: the value that is unknown (doesnt mean equal 0). It is ok to be empty
 # CRUD: stands for Create, read, update and delete
