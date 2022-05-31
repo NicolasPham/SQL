@@ -73,6 +73,18 @@
     >> WHERE title LIKE '%\%%': title contains '%' in it
     >> SELECT title FROM books WHERE title LIKE '%\_%': title has '_' in it
   
+# Aggregate Functions;
+  COUNT
+    > SELECT COUNT(DISTINCT author_fname, author_lname) FROM books;
+    > SELECT COUNT(title) FROM books WHERE tile LIKE '%the%';
+  
+  GROUP BY: summarizes or aggregates identical data into single rows
+    > SELECT author_lname, COUNT(*) FROM books GROUP BY author_lname;
+    > SELECT CONCAT('In ', released_year, ', ', COUNT(*), ' book(s) released') AS yell FROM books GROUP BY released_year ORDER BY released_year;
+   
+  MIN nad MAX:
+    > SELECT MIN(released_year) FROM books;
+    > 
   
 # Null value: the value that is unknown (doesnt mean equal 0). It is ok to be empty
 # CRUD: stands for Create, read, update and delete
