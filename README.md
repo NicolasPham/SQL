@@ -88,6 +88,15 @@
   
 # Null value: the value that is unknown (doesnt mean equal 0). It is ok to be empty
 # CRUD: stands for Create, read, update and delete
+# Data Type:
+  > CHAR(), VARCHAR()
+  > INT, DECIMAL(5,2), FLOAT, DOUBLE
+  > DATE, TIME, DATETIME(), CURDATE(), CURTIME(), NOW()
+    >> https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html
+    >> DATE_FORMAT(date, format): https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_date-format
+  > Date Math:
+    >> DATEDIFF(expr1, expr2): the number of days
+    >> DATE_ADD(date, interval, expr unit) / DATE_SUB(date, interval, expr unit): 
 
 ```
 </p>
