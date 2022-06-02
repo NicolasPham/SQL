@@ -84,7 +84,8 @@
    
   MIN nad MAX:
     > SELECT MIN(released_year) FROM books;
-    > 
+      >> SELECT CONCAT(author_fname, ' ', author_lname) as full_name,
+		    pages FROM BOOKS WHERE pages = (SELECT MAX(pages) from books);
   
 # Null value: the value that is unknown (doesnt mean equal 0). It is ok to be empty
 # CRUD: stands for Create, read, update and delete
