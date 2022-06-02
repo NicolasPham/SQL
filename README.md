@@ -97,7 +97,12 @@
   > Date Math:
     >> DATEDIFF(expr1, expr2): the number of days
     >> DATE_ADD(date, interval, expr unit) / DATE_SUB(date, interval, expr unit): 
-
+    >> TIMESTAMP
+       >>> CREATE TABLE comments(
+                                  content VARCHAR(100), 
+                                  changed_at TIMESTAMP DEFAULT NOW() ON UPDATE CURRENT_TIMESTAMP
+                                );
+    
 ```
 </p>
 </details>
