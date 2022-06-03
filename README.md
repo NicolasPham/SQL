@@ -103,7 +103,13 @@
                                   content VARCHAR(100), 
                                   changed_at TIMESTAMP DEFAULT NOW() ON UPDATE CURRENT_TIMESTAMP
                                 );
-    
+
+#LOGICAL OPERATORS:
+> Not Equal !=
+> NOT LIKE / LIKE
+> AND &&
+> 
+	
 ```
 </p>
 </details>
