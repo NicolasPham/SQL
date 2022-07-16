@@ -1,6 +1,6 @@
 <details><summary>Collapse</summary><p>
   
-``` PYTHON
+``` SQL
 # Create table
   CREATE TABLE <table_name>
                  (
