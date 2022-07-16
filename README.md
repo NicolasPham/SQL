@@ -1,6 +1,6 @@
 <details><summary>Collapse</summary><p>
   
-``` SQL
+``` MySQL
 # Create table
   CREATE TABLE <table_name>
                  (
