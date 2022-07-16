@@ -104,6 +104,23 @@
                                   changed_at TIMESTAMP DEFAULT NOW() ON UPDATE CURRENT_TIMESTAMP
                                 );
 
+	
+# 1 : Many / Many : Many section:
+   # Data relationships:
+	Primary key: keep the row unique
+	Foreign key: are references to another table from one table
+	> CREATE table customers(
+	                        customer_id INT AUTO_INCREMENT PRIMARY KEY,
+	                        ....
+	                        );
+	> CREATE table orders(
+	                     ....
+	                     customer_id INT,
+	                     FOREIGN KEY(customer_id) REFERENCES customers(customer_id)
+	                     );
+	
+	
+	
 #LOGICAL OPERATORS:
 > Not Equal !=
 > NOT LIKE / LIKE
