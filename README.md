@@ -124,6 +124,9 @@
       SELECT first_name, last_name, order_date, amount 
       FROM customers, orders 
       WHERE customers.id = orders.customer_id;
+
+      SELECT irst_name, last_name, order_date, amount FROM customers
+	JOIN orders ON customer.id = orders.customer_id;
    
       
 	
