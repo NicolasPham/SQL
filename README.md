@@ -118,14 +118,21 @@
 	                     customer_id INT,
 	                     FOREIGN KEY(customer_id) REFERENCES customers(customer_id)
 	                     );
-	
+   # Cross join: 
+      SELECT * FROM customers, orders;
+   # Inner join:
+      SELECT first_name, last_name, order_date, amount 
+      FROM customers, orders 
+      WHERE customers.id = orders.customer_id;
+   
+      
 	
 	
 #LOGICAL OPERATORS:
 > Not Equal !=
 > NOT LIKE / LIKE
 > AND &&
-> 
+> -- : comment not, a querry
 	
 ```
 </p>
