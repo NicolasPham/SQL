@@ -131,9 +131,9 @@
 	                     customer_id INT,
 	                     FOREIGN KEY(customer_id) REFERENCES customers(customer_id)
 	                     );
-   # Cross join: 
-      SELECT * FROM customers, orders;
-   # Inner join:
+   # Cross join: Give all the possible combinations between 2 tables
+      SELECT * FROM customers, orders; 
+   # Inner join: Give the only matching values between 2 tables
       SELECT first_name, last_name, order_date, amount 
       FROM customers, orders 
       WHERE customers.id = orders.customer_id;
@@ -141,7 +141,7 @@
       SELECT irst_name, last_name, order_date, amount FROM customers
 	(INNER) JOIN orders ON customer.id = orders.customer_id;
 	   # Inner is optional
-   # Left join:
+   # Left join: Keep all the values in the left table, and match whatever values of the right table to the left table
       SELECT irst_name, last_name, order_date, amount FROM customers
 	LEFT JOIN orders ON customer.id = orders.customer_id;	
    
