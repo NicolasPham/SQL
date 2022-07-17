@@ -80,8 +80,13 @@ STRING FUNCTIONS:
     >> WHERE stock_quantity LIKE '___' : 3 underscors equal to 3 digits exactly
     >> WHERE title LIKE '%\%%': title contains '%' in it
     >> SELECT title FROM books WHERE title LIKE '%\_%': title has '_' in it
-  
+```
+</p>
+</details>  
 # Aggregate Functions;
+<details><summary>Collapse</summary><p>
+  
+``` MySQL
   COUNT
     > SELECT COUNT(DISTINCT author_fname, author_lname) FROM books;
     > SELECT COUNT(title) FROM books WHERE tile LIKE '%the%';
@@ -125,9 +130,14 @@ STRING FUNCTIONS:
                                   changed_at TIMESTAMP DEFAULT NOW() ON UPDATE CURRENT_TIMESTAMP
                                 );
 
-	
-# 1 : Many / Many : Many section:
-   # Data relationships:
+```
+</p>
+</details>	
+JOINING TABLE -- 1 : Many / Many : Many section:
+<details><summary>Collapse</summary><p>
+  
+``` MySQL
+	# Data relationships:
 	Primary key: keep the row unique
 	Foreign key: are references to another table from one table
 	> CREATE table customers(
@@ -156,12 +166,12 @@ STRING FUNCTIONS:
       
 	
 	
+```
+</p>
+</details>	
 #LOGICAL OPERATORS:
 > Not Equal !=
 > NOT LIKE / LIKE
 > AND &&
 > -- : comment not, a querry
-	
-```
-</p>
-</details>
+
