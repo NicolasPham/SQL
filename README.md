@@ -1,7 +1,6 @@
-
 TABLES:
 <details><summary>Collapse</summary><p>
-  
+ 
 ``` MySQL
 # Create table
   CREATE TABLE <table_name>
@@ -12,7 +11,22 @@ TABLES:
                  age INT NOT NULL DEFAULT 0
                  PRIMARY KEY (id)
                  );
-
+# Data relationships:
+   Primary key: keep the row unique
+   Foreign key: are references to another table from one table
+   On delete cascade: delete values from foreign table if parents values deleted
+     > CREATE table customers(
+	                      customer_id INT AUTO_INCREMENT PRIMARY KEY,
+	                      ....
+	                      );
+     > CREATE table orders(
+	                   ....
+	                   customer_id INT,
+	                   FOREIGN KEY(customer_id) REFERENCES customers(customer_id)
+	                   ON DELETE CASCADE
+			-- delete freely value from both values parents and references
+			   );
+	
 # Insert / adding data into the table
   INSERT INTO <table_name>(column1, column2, etc)
   VALUES (variable 1a, variable2a, .etc)
@@ -26,7 +40,7 @@ TABLES:
   UPDATE <table_name> SET <column_name> = ''  
           WHERE <condition>;
   
-  DELETE FROM <table_name> WHERE <column_name> = <condition>;
+  DELETE FROM <table_name> WHERE <column_name> = <condition>;	
 
 ```
 </p>
@@ -137,18 +151,6 @@ JOINING TABLE
 <details><summary>Collapse</summary><p>
   
 ``` MySQL
-	# Data relationships:
-	Primary key: keep the row unique
-	Foreign key: are references to another table from one table
-	> CREATE table customers(
-	                        customer_id INT AUTO_INCREMENT PRIMARY KEY,
-	                        ....
-	                        );
-	> CREATE table orders(
-	                     ....
-	                     customer_id INT,
-	                     FOREIGN KEY(customer_id) REFERENCES customers(customer_id)
-	                     );
    # Cross join: Give all the possible combinations between 2 tables
       SELECT * FROM customers, orders; 
    # Inner join: Give the only matching values between 2 tables
