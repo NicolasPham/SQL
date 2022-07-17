@@ -44,8 +44,8 @@
     >>> SELECT SUBSTRING('Hello World', -3): rld (how many last characters we want to get)
 
 > REPLACE: replace parts of the string
-  >> SELECT REAPLCE ('Hello World', 'Hell', '1234'): '1234o World'
-  >> SELECT REPALCE (title, 'e', '3') FROM books;
+  >> SELECT REPLACE ('Hello World', 'Hell', '1234'): '1234o World'
+  >> SELECT REPLACE (title, 'e', '3') FROM books;
 
 > CHAR_LENGTH(): count how many characters in the string
   >> SELECT CHAR_LENGTH('Hello World'): 11
