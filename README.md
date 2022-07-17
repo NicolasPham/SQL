@@ -1,3 +1,4 @@
+TABLE
 <details><summary>Collapse</summary><p>
   
 ``` MySQL
@@ -25,8 +26,15 @@
           WHERE <condition>;
   
   DELETE FROM <table_name> WHERE <column_name> = <condition>;
+
+```
+</p>
+</details>
+
+STRING FUNCTIONS:
+<details><summary>Collapse</summary><p>
   
-# String functions:
+``` MySQL
 > CONCAT:  combine data for cleaner output
   >> concat (<column2>, 'text', <column2>, 'text') : 
      >>> SELECT CONCAT(first_name, ' ', last_name) AS <new_name> FROM <table_name>;
