@@ -92,7 +92,14 @@
         FROM customers JOIN orders ON customers.id = orders.customer_id
 	GROUP BY orders.customer_id
 	ORDER BY total_amount DESC;
-  
+  IFNULL:
+     > SELECT first_name, 
+	last_name, 
+	IFNULL (SUM(amount),0) as total_spent
+	FROM customers LEFT JOIN orders ON customers.id = orders.customer_id
+	GROUP BY customers.id
+	ORDER BY total_spent DESC;
+	
 # Null value: the value that is unknown (doesnt mean equal 0). It is ok to be empty
 # CRUD: stands for Create, read, update and delete
 # Data Type:
@@ -132,7 +139,11 @@
       WHERE customers.id = orders.customer_id;
 
       SELECT irst_name, last_name, order_date, amount FROM customers
-	JOIN orders ON customer.id = orders.customer_id;
+	(INNER) JOIN orders ON customer.id = orders.customer_id;
+	   # Inner is optional
+   # Left join:
+      SELECT irst_name, last_name, order_date, amount FROM customers
+	LEFT JOIN orders ON customer.id = orders.customer_id;	
    
       
 	
