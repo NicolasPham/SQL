@@ -86,6 +86,12 @@
     > SELECT MIN(released_year) FROM books;
       >> SELECT CONCAT(author_fname, ' ', author_lname) as full_name,
 		    pages FROM BOOKS WHERE pages = (SELECT MAX(pages) from books);
+		   
+   SUM:
+      > SELECT first_name, last_name, order_date, SUM(amount) AS total_amount
+        FROM customers JOIN orders ON customers.id = orders.customer_id
+	GROUP BY orders.customer_id
+	ORDER BY total_amount DESC;
   
 # Null value: the value that is unknown (doesnt mean equal 0). It is ok to be empty
 # CRUD: stands for Create, read, update and delete
