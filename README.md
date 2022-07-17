@@ -1,7 +1,7 @@
 TABLES:
 <details><summary>Collapse</summary><p>
  
-``` MySQL
+``` python
 # Create table
   CREATE TABLE <table_name>
                  (
@@ -48,7 +48,7 @@ TABLES:
 STRING FUNCTIONS:
 <details><summary>Collapse</summary><p>
   
-``` MySQL
+``` python
 > CONCAT:  combine data for cleaner output
   >> concat (<column2>, 'text', <column2>, 'text') : 
      >>> SELECT CONCAT(first_name, ' ', last_name) AS <new_name> FROM <table_name>;
@@ -100,7 +100,7 @@ STRING FUNCTIONS:
 AGGREGATE FUNCTIONS;
 <details><summary>Collapse</summary><p>
   
-``` MySQL
+``` python
   COUNT
     > SELECT COUNT(DISTINCT author_fname, author_lname) FROM books;
     > SELECT COUNT(title) FROM books WHERE tile LIKE '%the%';
@@ -126,6 +126,16 @@ AGGREGATE FUNCTIONS;
 	FROM customers LEFT JOIN orders ON customers.id = orders.customer_id
 	GROUP BY customers.id
 	ORDER BY total_spent DESC;
+   IF function:
+	-- For more than 2 cases:
+	CASE
+	   WHEN AVG(grade) >=75 THEN 'PASSING'
+	   WHEN AVG(grade) IS NULL THEN 'FAILING'
+	   ELSE 'FAILLING'
+   	END AS passing_status
+	
+	-- For 2 cases: 
+	IF(AVG(grade) >= 75, 'PASSING', 'FAILLING') AS passing_status
 	
 # Null value: the value that is unknown (doesnt mean equal 0). It is ok to be empty
 # CRUD: stands for Create, read, update and delete
@@ -150,7 +160,7 @@ AGGREGATE FUNCTIONS;
 JOINING TABLE
 <details><summary>Collapse</summary><p>
   
-``` MySQL
+``` python
    # Cross join: Give all the possible combinations between 2 tables
       SELECT * FROM customers, orders; 
    # Inner join: Give the only matching values between 2 tables
