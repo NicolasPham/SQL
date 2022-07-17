@@ -168,10 +168,13 @@ JOINING TABLE
 ```
 </p>
 </details>	
+
 LOGICAL OPERATORS:
+	
 ``` SQL
 > Not Equal !=
 > NOT LIKE / LIKE
 > AND &&
 > -- : comment not, a querry
+	
 ```
