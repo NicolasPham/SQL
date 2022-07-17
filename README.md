@@ -30,7 +30,6 @@ TABLE
 ```
 </p>
 </details>
-
 STRING FUNCTIONS:
 <details><summary>Collapse</summary><p>
   
@@ -83,7 +82,7 @@ STRING FUNCTIONS:
 ```
 </p>
 </details>  
-# Aggregate Functions;
+AGGREGATE FUNCTIONS;
 <details><summary>Collapse</summary><p>
   
 ``` MySQL
@@ -133,7 +132,7 @@ STRING FUNCTIONS:
 ```
 </p>
 </details>	
-JOINING TABLE -- 1 : Many / Many : Many section:
+JOINING TABLE
 <details><summary>Collapse</summary><p>
   
 ``` MySQL
@@ -169,9 +168,10 @@ JOINING TABLE -- 1 : Many / Many : Many section:
 ```
 </p>
 </details>	
-#LOGICAL OPERATORS:
+LOGICAL OPERATORS:
+``` SQL
 > Not Equal !=
 > NOT LIKE / LIKE
 > AND &&
 > -- : comment not, a querry
-
+```
