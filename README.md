@@ -1,4 +1,4 @@
-TABLE:
+TABLES:
 <details><summary>Collapse</summary><p>
   
 ``` MySQL
