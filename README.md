@@ -94,6 +94,8 @@ STRING FUNCTIONS:
     >> WHERE stock_quantity LIKE '___' : 3 underscors equal to 3 digits exactly
     >> WHERE title LIKE '%\%%': title contains '%' in it
     >> SELECT title FROM books WHERE title LIKE '%\_%': title has '_' in it
+  
+  > HAVING:  another word of WHERE
 ```
 </p>
 </details>  
