@@ -40,7 +40,8 @@ TABLES:
   UPDATE <table_name> SET <column_name> = ''  
           WHERE <condition>;
   
-  DELETE FROM <table_name> WHERE <column_name> = <condition>;	
+  DELETE FROM <table_name> WHERE <column_name> = <condition>;
+  TRUNCATE [table] table_name;
 
 ```
 </p>
@@ -96,6 +97,8 @@ STRING FUNCTIONS:
     >> SELECT title FROM books WHERE title LIKE '%\_%': title has '_' in it
   
   > HAVING:  another word of WHERE
+  > IN (value1, value2)
+  > BETWEEN value1 and value2
 ```
 </p>
 </details>  
