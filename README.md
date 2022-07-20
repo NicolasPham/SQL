@@ -43,10 +43,11 @@ TABLES:
   DELETE FROM <table_name> WHERE <column_name> = <condition>;
   TRUNCATE [table] table_name;
 	
-# Add column to table
+# Add | Drop column to table
    ALTER TABLE table_name
-	ADD COLUMN column_name column_definition [FIRST | AFTER existing_column];
-
+	ADD [COLUMN] column_name column_definition [FIRST | AFTER existing_column];
+   ALTER TABLE table_name
+	DROP COLUMN column_name
 ```
 </p>
 </details>
