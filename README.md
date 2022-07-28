@@ -79,8 +79,13 @@ STRING FUNCTIONS:
   >> SELECT CHAR_LENGTH('Hello World'): 11
   
 > UPPER and LOWER: Change a string case
-
-# Refining the selection
+```
+</p>
+</details>  
+REFINING SELECTION
+<details><summary>Collapse</summary><p>
+  
+``` python
   > DISTINCT: return only distinct (different) values
     >> SELECT DISTINCT author_lname FROM books;
     >> SELECT DISTINCT author_fname, author_lname FROM books;
@@ -103,7 +108,12 @@ STRING FUNCTIONS:
   
   > HAVING:  another word of WHERE
   > IN (value1, value2)
-  > BETWEEN value1 and value2
+  > BETWEEN value1 and value2 
+  > CAST(): convert anything from one data type to another
+  	>> CAST(purchase_price AS FLOAT64)
+  > COALESCE(): return non-null value in a list
+  	>> COALESCE(product, product_code) AS product_info : check product column first, if it is null then check product_code
+  
 ```
 </p>
 </details>  
