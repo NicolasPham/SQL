@@ -1,7 +1,7 @@
 TABLES:
 <details><summary>Collapse</summary><p>
  
-``` python
+``` sql
 # Create table
   CREATE TABLE <table_name>
                  (
@@ -54,7 +54,7 @@ TABLES:
 STRING FUNCTIONS:
 <details><summary>Collapse</summary><p>
   
-``` python
+``` sql
 > CONCAT:  combine data for cleaner output
   >> concat (<column2>, 'text', <column2>, 'text') : 
      >>> SELECT CONCAT(first_name, ' ', last_name) AS <new_name> FROM <table_name>;
@@ -85,7 +85,7 @@ STRING FUNCTIONS:
 REFINING SELECTION
 <details><summary>Collapse</summary><p>
   
-``` python
+``` sql
   > DISTINCT: return only distinct (different) values
     >> SELECT DISTINCT author_lname FROM books;
     >> SELECT DISTINCT author_fname, author_lname FROM books;
@@ -120,7 +120,7 @@ REFINING SELECTION
 AGGREGATE FUNCTIONS;
 <details><summary>Collapse</summary><p>
   
-``` python
+``` sql
   COUNT: return the number of rows that matches the specific criteria
     > SELECT COUNT(DISTINCT author_fname, author_lname) FROM books;
     > SELECT COUNT(title) FROM books WHERE tile LIKE '%the%';
@@ -180,7 +180,7 @@ AGGREGATE FUNCTIONS;
 JOINING TABLE
 <details><summary>Collapse</summary><p>
   
-``` python
+``` sql
    # Cross join: Give all the possible combinations between 2 tables
       SELECT * FROM customers, orders; 
    # Inner join: Give the only matching values between 2 tables
