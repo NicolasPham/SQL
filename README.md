@@ -121,7 +121,7 @@ AGGREGATE FUNCTIONS;
 <details><summary>Collapse</summary><p>
   
 ``` python
-  COUNT
+  COUNT: return the number of rows that matches the specific criteria
     > SELECT COUNT(DISTINCT author_fname, author_lname) FROM books;
     > SELECT COUNT(title) FROM books WHERE tile LIKE '%the%';
   
