@@ -106,7 +106,7 @@ REFINING SELECTION
     >> WHERE title LIKE '%\%%': title contains '%' in it
     >> SELECT title FROM books WHERE title LIKE '%\_%': title has '_' in it
   
-  > HAVING:  another word of WHERE
+  > HAVING:  another word of WHERE but can be put at the end of the querry
   > IN (value1, value2)
   > BETWEEN value1 and value2 
   > CAST(): convert anything from one data type to another
