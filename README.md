@@ -205,6 +205,7 @@ JOINING TABLE
 LOGICAL OPERATORS:
 	
 ``` SQL
+> %: Called Modulo, return the remainder when one number is divided by another (same as MOD in spreadsheer)
 > Not Equal !=
 > NOT LIKE / LIKE
 > AND &&
