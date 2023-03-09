@@ -212,3 +212,13 @@ LOGICAL OPERATORS:
 > -- : comment not, a querry
 	
 ```
+
+NODEJS using MySQL
+<details>
+
+```sql
+
+
+```
+</details>
+
