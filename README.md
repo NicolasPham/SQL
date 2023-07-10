@@ -91,6 +91,8 @@ REFINING SELECTION
 <details><summary>Collapse</summary><p>
   
 ``` sql
+  > VIEW
+    >> CREATE VIEW employee_hire_years AS SELECT ....
   > DISTINCT: return only distinct (different) values
     >> SELECT DISTINCT author_lname FROM books;
     >> SELECT DISTINCT author_fname, author_lname FROM books;
