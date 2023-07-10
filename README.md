@@ -2,6 +2,11 @@ TABLES:
 <details><summary>Collapse</summary><p>
  
 ``` sql
+> Table rows and columns are referred to as records and fields
+> Good table manners:
+	>> table names should be lowercase, with no spaces, plural
+	>> field names should be lowercase, with no spaces, singular, be different from other field names
+	>> unique identifier (Key): 
 # Create table
   CREATE TABLE <table_name>
                  (
