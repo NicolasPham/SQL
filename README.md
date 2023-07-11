@@ -123,6 +123,9 @@ REFINING SELECTION
   	>> CAST(purchase_price AS FLOAT64)
   > COALESCE(): return non-null value in a list
   	>> COALESCE(product, product_code) AS product_info : check product column first, if it is null then check product_code
+  > NULL
+    > IS NULL: WHERE birthdat IS NULL : return the table where birthdate has missing values
+    > IS NOT NULL: WHERE birthdate IS NOT NULL: return the table where birthdate is not null
   
 ```
 </p>
