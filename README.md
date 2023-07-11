@@ -131,6 +131,7 @@ AGGREGATE FUNCTIONS;
   COUNT: return the number of rows that matches the specific criteria
     > SELECT COUNT(DISTINCT author_fname, author_lname) FROM books;
     > SELECT COUNT(title) FROM books WHERE tile LIKE '%the%';
+    > SELECT COUNT(*) AS total_records FROM people: count records in the table
   
   GROUP BY: summarizes or aggregates identical data into single rows
     > SELECT author_lname, COUNT(*) FROM books GROUP BY author_lname;
