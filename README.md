@@ -106,6 +106,8 @@ REFINING SELECTION
     >> SELECT title FROM books ORDER BY released_year DESC LIMIT 2,5; take 5 books that have the most sells "after" 2
     
   > LIKE : better search
+	>> %: match zero, one, or many character
+	>> _: match a single character
     >> WHERE author_fname LIKE '%da%' : where author first name has the letters "da" in it
       >>> % ... % is called wildcard
     >> WHERE author_fname LIKE 'da%' : where author first name start "da"
