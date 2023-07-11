@@ -115,7 +115,8 @@ REFINING SELECTION
   
   > HAVING:  another word of WHERE but can be put at the end of the querry
   > IN (value1, value2)
-  > BETWEEN value1 and value2 
+  > BETWEEN value1 and value2
+  > AND, OR : use parentheses to make it clear which criteria should be checked first
   > CAST(): convert anything from one data type to another
   	>> CAST(purchase_price AS FLOAT64)
   > COALESCE(): return non-null value in a list
@@ -213,20 +214,12 @@ JOINING TABLE
 LOGICAL OPERATORS:
 	
 ``` SQL
-> %: Called Modulo, return the remainder when one number is divided by another (same as MOD in spreadsheer)
+> %: Called Modulo, return the remainder when one number is divided by another (same as MOD in spreadsheet)
 > Not Equal !=
 > NOT LIKE / LIKE
 > AND &&
+> OR 
 > -- : comment not, a querry
 	
 ```
-
-NODEJS using MySQL
-<details>
-
-```sql
-
-
-```
-</details>
 
