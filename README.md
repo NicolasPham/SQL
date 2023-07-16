@@ -153,6 +153,9 @@ AGGREGATE FUNCTIONS;
         FROM customers JOIN orders ON customers.id = orders.customer_id
 	GROUP BY orders.customer_id
 	ORDER BY total_amount DESC;
+  ROUND:
+    > SELECT ROUND(AVG(budget), 2) FROM films: 412239.28
+    > SELECT ROUND(AVG(budget), -3) FROM films: 412000
   IFNULL:
      > SELECT first_name, 
 	last_name, 
