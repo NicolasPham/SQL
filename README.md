@@ -1,3 +1,10 @@
+Step to answer question:
+1. Desired result: exp: a table that sumarizes the revenue per platform per year
+2. Stored where? :
+3. Which columns?
+4. Which functions: exp: sum up the revenue per year
+5. What filters: 
+
 TABLES:
 <details><summary>Collapse</summary><p>
  
