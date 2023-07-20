@@ -133,6 +133,11 @@ REFINING SELECTION
   > NULL
     > IS NULL: WHERE birthdat IS NULL : return the table where birthdate has missing values
     > IS NOT NULL: WHERE birthdate IS NOT NULL: return the table where birthdate is not null
+
+  > CASE:
+    > CASE WHEN x = 1 THEN 'a'
+    	WHEN x = 1 THEN 'b'
+	ELSE 'c' END AS new_column
   
 ```
 </p>
