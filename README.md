@@ -134,10 +134,12 @@ REFINING SELECTION
     > IS NULL: WHERE birthdat IS NULL : return the table where birthdate has missing values
     > IS NOT NULL: WHERE birthdate IS NOT NULL: return the table where birthdate is not null
 
-  > CASE:
+  > CASE: create a column
     > CASE WHEN x = 1 THEN 'a'
     	WHEN x = 1 THEN 'b'
 	ELSE 'c' END AS new_column
+   > SELECT COUNT(CASE WHEN home_goal > away_goal AND hometeam_id = 8650 THEN id) END AS home_wins
+     FROM matches GROUP BY season
   
 ```
 </p>
