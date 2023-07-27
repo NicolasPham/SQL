@@ -222,6 +222,12 @@ JOINING TABLE
       SELECT irst_name, last_name, order_date, amount FROM customers
 	(INNER) JOIN orders ON customer.id = orders.customer_id;
 	   # Inner is optional
+
+      SELECT company.name 
+      FROM company
+	INNER JOIN fortune500 
+	ON company.ticker=fortune500.ticker;
+
    # Left join: Keep all the values in the left table, and match whatever values of the right table to the left table
       SELECT irst_name, last_name, order_date, amount FROM customers
 	LEFT JOIN orders ON customer.id = orders.customer_id;	
