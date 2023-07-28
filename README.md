@@ -60,6 +60,8 @@ TABLES:
 	ADD [COLUMN] column_name column_definition [FIRST | AFTER existing_column];
    ALTER TABLE table_name
 	DROP COLUMN column_name
+
+# Save query into
 ```
 </p>
 </details>
