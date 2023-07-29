@@ -215,7 +215,13 @@ JOINING TABLE
   
 ``` sql
    # Cross join: Give all the possible combinations between 2 tables
-      SELECT * FROM customers, orders; 
+      SELECT * FROM customers, orders;
+
+	SELECT prim_minister, president
+	  FROM prime_ministers as p1
+	  CROSS JOIN presidents as p2
+	  WHERE p1.continent IN ('North America', 'Oceania');
+
    # Inner join: Give the only matching values between 2 tables
       SELECT first_name, last_name, order_date, amount 
       FROM customers, orders 
