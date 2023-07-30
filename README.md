@@ -142,6 +142,21 @@ REFINING SELECTION
 	ELSE 'c' END AS new_column
    > SELECT COUNT(CASE WHEN home_goal > away_goal AND hometeam_id = 8650 THEN id) END AS home_wins
      FROM matches GROUP BY season
+
+   > Semi-joint:
+SELECT DISTINCT name
+FROM languages
+WHERE code IN
+  (SELECT code FROM countries
+  WHERE region LIKE 'Middle East')
+ORDER BY name;
+
+   > Anti-joint:
+SELECT code, name
+FROM countries
+WHERE continent LIKE 'Oc%'
+AND code NOT IN
+	(SELECT code FROM currencies)
   
 ```
 </p>
@@ -248,6 +263,20 @@ UNION ALL
 SELECT country_code as code, year
 FROM populations
 ORDER BY code, year
+
+SELECT c1.name
+  FROM cities AS c1
+  WHERE country_code IN
+(
+    SELECT e.code
+    FROM economies as e  
+    UNION
+    SELECT c2.code
+    FROM currencies as c2
+    EXCEPT
+    SELECT p.country_code
+    FROM populations as p
+);
       
 	
 	
