@@ -239,7 +239,15 @@ JOINING TABLE
    # Left join: Keep all the values in the left table, and match whatever values of the right table to the left table
       SELECT irst_name, last_name, order_date, amount FROM customers
 	LEFT JOIN orders ON customer.id = orders.customer_id;	
-   
+
+
+  # UNION
+SELECT code, year
+FROM economies
+UNION ALL
+SELECT country_code as code, year
+FROM populations
+ORDER BY code, year
       
 	
 	
