@@ -3,8 +3,13 @@ Step to answer question:
 2. Stored where? :
 3. Which columns?
 4. Which functions: exp: sum up the revenue per year
-5. What filters: 
+5. What filters:
 
+Data type:
+  > Date-time: datetime, date, time, datetime2, smalldatetim
+
+Data type precedence:
+  > user_defined > datetime > date > float > decimal > int > bit > nvarchar > varchar > binary
 TABLES:
 <details><summary>Collapse</summary><p>
  
@@ -23,6 +28,8 @@ TABLES:
                  age INT NOT NULL DEFAULT 0
                  PRIMARY KEY (id)
                  );
+  Add column:
+	ALTER TABLE table_name ADD column_name data_type
 # Data relationships:
    Primary key: keep the row unique
    Foreign key: are references to another table from one table
@@ -130,6 +137,10 @@ REFINING SELECTION
   > AND, OR : use parentheses to make it clear which criteria should be checked first
   > CAST(): convert anything from one data type to another
   	>> CAST(purchase_price AS FLOAT64)
+  > CONVERT() : same as CAST()
+	>> CONVERT(data_type [length], expression [,style])
+	  >>> CONVERT(int, 3.14) AS decimal_to_int
+	  >>> CONVERT(varchar(20), GETDATE(), 104) AS date_to_string: 104 is a code for day.month.year
   > COALESCE(): return non-null value in a list
   	>> COALESCE(product, product_code) AS product_info : check product column first, if it is null then check product_code
   > NULL
