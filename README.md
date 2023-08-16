@@ -1,3 +1,7 @@
+GENERAL
+<details>
+
+ ```sql
 Step to answer question:
 1. Desired result: exp: a table that sumarizes the revenue per platform per year
 2. Stored where? :
@@ -10,6 +14,33 @@ Data type:
 
 Data type precedence:
   > user_defined > datetime > date > float > decimal > int > bit > nvarchar > varchar > binary
+Functions that return system date and time
+  > High-precision:
+	SYSDATETIME(): return computer's date and time without timezone information
+	SYSUTCDATETIME(): return computer's date and time as UTC
+	SYSUTCDATETIMEOFFSET(): return computer's date and time together with timezone offset
+
+  > Low-precision:
+	GETDATE(): return the current date
+	GETUTCDATE(): return current date with UTC
+	CURRENT_TIMESTAMP: similar to GETDATE(), but no parameters, so no parentheses
+
+FUNCTIONS that return date and time parts
+  > YEAR(date): return year from specified date
+	Same for MONTH(date), DAY(date) for day of the month
+  > DATENAME(datepart, date): return a string
+	  > datepart: year(yy, yyyy), month(mm, m), dayofyear(dy, y), week(wk, ww), weekday(dw, w)
+  > DATEPART(datepart, date): similar to DATENAME but returns only the integer
+  > DATEFROMPARTS(year, month, day): receive 3 parameters to generate a date
+
+ARITHMETIC OPERATIONS ON DATE:
+  > DATEADD(datepart, number, date): modify the value of dau
+  > DATDIFF(datepart, startdate, enddate): return difference between 2 days
+
+
+```
+</details>
+
 TABLES:
 <details><summary>Collapse</summary><p>
  
@@ -54,6 +85,8 @@ TABLES:
   
   SELECT <column_name1> as <....>, <column_name2> FROM <table_name>
           WHERE <condition>;
+  DECLARE @variable_name datatype = value
+	> DECLARE @date datetime = '2023-08-15'
   
   # Update the data: make sure to target the right data before updating
   UPDATE <table_name> SET <column_name> = ''  
