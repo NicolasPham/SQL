@@ -36,6 +36,15 @@ FUNCTIONS that return date and time parts
 ARITHMETIC OPERATIONS ON DATE:
   > DATEADD(datepart, number, date): modify the value of dau
   > DATDIFF(datepart, startdate, enddate): return difference between 2 days
+  > ISDATE()
+	>> date, time, datetime1: return 1
+	>> datetime2: return 0
+	>> other type: return 0
+  > SET DATEFORMAT {format:}
+	>> format: mdy, dmy, ymd, ydm, myd, mdy
+  > SET LANGUAGE {format}
+	>> format: English, Italian, Spanish, etc.
+
 
 
 ```
