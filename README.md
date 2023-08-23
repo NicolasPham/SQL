@@ -118,7 +118,7 @@ STRING FUNCTIONS:
 <details><summary>Collapse</summary><p>
   
 ``` sql
-> CONCAT:  combine data for cleaner output
+> CONCAT(string1, string2, [, stringN]):  combine data for cleaner output
   >> concat (<column2>, 'text', <column2>, 'text') : 
      >>> SELECT CONCAT(first_name, ' ', last_name) AS <new_name> FROM <table_name>;
   
@@ -126,12 +126,12 @@ STRING FUNCTIONS:
      CONCAT (author_fname, author_lname) AS full,
      FROM books;
 
-> Concat_WS
-  >> CONCAT('text', <column1>, <column2>, .etc) : combine all columns and separate them by 'text'
+> Concat_WS(separator, string1, string2, [, stringN]): concat with separator
+  >> CONCAT('text', <column1>, <column2>, .etc): combine all columns and separate them by 'text'
 
-> SUBSTRING
+> SUBSTRING(character_expression, start, number_of_characters)
   >> SELECT SUBSTRING('STRING',#1, #2): return the character from #1 to #2, start with 1
-    >>> SELECT SUBSTING ('Hello World', 7): World
+    >>> SELECT SUBSTRING('Hello World', 7): World
     >>> SELECT SUBSTRING('Hello World', -3): rld (how many last characters we want to get)
 
 > REPLACE: replace parts of the string
@@ -142,6 +142,27 @@ STRING FUNCTIONS:
   >> SELECT CHAR_LENGTH('Hello World'): 11
   
 > UPPER and LOWER: Change a string case
+> Position functions:
+  >> LEN(): returns the number of characters from the provided string
+  >> CHARINDEX(): looks for character expression in a given string and returns the starting position
+	CHARINDEX(expression_to_find, expression_to_search, [, start_location])
+  >> PATINDEX(): similar to CHARINDEX but more powerful
+	PATINDEX(%pattern%, expression [, location])
+	%: match any string of any length (including zero length)
+	_: Match on a single character
+	[]: match on 'any' character in the bracket ([abc] would match on a, b, or c)
+>> LEFT(character_expression, number_of_characters): returns the specified number of characters from the beginning of the string
+>> RIGHT(character_expression, number_of_characters): returns the specified number of characters from the end of the string
+>> LTRIM(character_expression): returns a string after removing leading blanks
+>> RTRIM(character_expression): returns a string after removing trailing blanks
+>> TRIM([character_from] character_expression): returns a string after removing blanks or other specified characters
+
+>> STRING_AGG(epxression, separator) [<order_clause>]: concatenate the values of string expressions and places separtor values between them
+	STRING_AGG(first_name, ' ') WITHIN GROUP (ORDER BY first_name)
+>> STRING_SPLIT(string, separator): divides string into smaller pieces, based on separator, returns a single column table
+	Can only use in the FROM clause since it returns a column
+	SELECT * FROM STRING_SPLIT('1,2,3,4', ',')
+
 ```
 </p>
 </details>  
