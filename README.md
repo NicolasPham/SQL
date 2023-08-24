@@ -32,6 +32,7 @@ FUNCTIONS that return date and time parts
 	  > datepart: year(yy, yyyy), month(mm, m), dayofyear(dy, y), week(wk, ww), weekday(dw, w)
   > DATEPART(datepart, date): similar to DATENAME but returns only the integer
   > DATEFROMPARTS(year, month, day): receive 3 parameters to generate a date
+  > EXTRACT(YEAR FROM date): extract part from a given date
 
 ARITHMETIC OPERATIONS ON DATE:
   > DATEADD(datepart, number, date): modify the value of dau
