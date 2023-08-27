@@ -111,7 +111,11 @@ TABLES:
    ALTER TABLE table_name
 	DROP COLUMN column_name
 
-# Save query into
+# Save query into a temporary table
+WITH <table_name> AS (SELECT * FROM <table>)
+	
+
+
 ```
 </p>
 </details>
