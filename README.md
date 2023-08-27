@@ -112,7 +112,9 @@ TABLES:
 	DROP COLUMN column_name
 
 # Save query into a temporary table
-WITH <table_name> AS (SELECT * FROM <table>)
+WITH <table_name1> AS (SELECT * FROM <table>),
+	<table_name2> AS (SELECT * FROM <table>)
+SELECT * FROM ...
 	
 
 
