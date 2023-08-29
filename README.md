@@ -389,12 +389,25 @@ SELECT name, continent, inflation_rate
 LOGICAL OPERATORS:
 	
 ``` SQL
-> %: Called Modulo, return the remainder when one number is divided by another (same as MOD in spreadsheet)
+> %: Called Modulo, return the remainder when one number is divided by another (same as MOD in the spreadsheet)
 > Not Equal !=
 > NOT LIKE / LIKE
 > AND &&
 > OR 
-> -- : comment not, a querry
+> -- : comment not, a query
+> WINDOW FUNCTION:
+  >> OVER(): pass aggregated function down the dataset, similar to subqueries in SELECT
+	SELECT AVG(home_goal + away_goal) OVER() AS goal_score
+  >> RANK(): creates a rank of information
+	SELECT RANK() OVER(ORDER BY home_goal + away_goal DESC) AS goal_rank
+	FROM match WHERE season = '2021/2022'
+  >> PARTITION(): Calculate separate values for different categories
+	AVG(home_goal) OVER(PARTITION BY season)
+	AVG(home_goal + away_home) OVER(PARTITION BY m.season, c.name) AS season_ctry_avg
+  >> SLIDING: performs calculation relative to the current row
+	SELECT SUM(home_goal) OVER(ORDER BY date ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS running_total
+	SELECT SUM(home_goal) OVER(ORDER BY date ROWS 1 PRECEDING AND CURRENT ROW) AS last2
+	
 	
 ```
 
